@@ -1,0 +1,23 @@
+server:
+  port: 7101
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/dongheping/dhp-micro-service-config.git
+    bus:
+      trace:
+        enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  application:
+    name: dhp-micro-service-config-server
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
